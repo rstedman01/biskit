@@ -43,8 +43,8 @@ class PDBParseFile( PDBParser ):
     DEFAULTS = {}
     
     #: default regular expressions for parsing REMARK entries
-    RE_REMARKS = [ ('resolution', 
-                    '2 RESOLUTION\. *([0-9\.]+|NOT APPLICABLE)' ),
+    RE_REMARKS = [ (r'resolution', 
+                    r'2 RESOLUTION\. *([0-9\.]+|NOT APPLICABLE)' ),
                    
                    ]
 
