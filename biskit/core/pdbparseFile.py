@@ -132,7 +132,7 @@ class PDBParseFile( PDBParser ):
                 for k in keys:
     
                     a = model.atoms.get( k, default=0, update=False )
-                    if (a is 0) or (a is None):
+                    if (a == 0) or (a == None):
                     
                         dflt = self.DEFAULTS.get( k, None )
                         model.atoms.set(k, atoms.get(k, dflt), changed=0 )
@@ -159,7 +159,7 @@ class PDBParseFile( PDBParser ):
         except:
             msg = self.__xplorAtomIndicesTest( source ) or ' '
             raise PDBParserError('Cannot read ' + str(source) + ' as PDB\n'\
-                           '\ERROR: ' + T.lastError() + msg)
+                           'ERROR: ' + T.lastError() + msg)
 
         model.setSource( source )
 
@@ -183,7 +183,7 @@ class PDBParseFile( PDBParser ):
         f.close()
 
         for i in range( len(lines) ):
-            if re.match( '^ATOM\s{2}\*{5}', lines[i]):
+            if re.match('^ATOM\s{2}\*{5}', lines[i]):
                 msg = """
 Line %i to %i of the file %s contains invalid atom indices!
 
