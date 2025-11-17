@@ -531,7 +531,7 @@ class PDBModel:
             N0.put( mask, ter_atoms, 1 )
             self.atoms.set('after_ter', mask,
                            comment='rebuilt from old PDBModel.__terAtoms')
-        if ter_atoms is not 0:
+        if ter_atoms != 0:
             del self.__terAtoms
 
         ## biskit <= 2.0.1 cached a volatile index in __resIndex & __chainIndex
