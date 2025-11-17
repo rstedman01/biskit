@@ -848,7 +848,7 @@ def cartesian2D(r, w, deg=0): # radian if deg=0; degree if deg=1
 def polar2D(x, y, deg=0): # radian if deg=0; degree if deg=1 
     """
     Convert from rectangular (x,y) to polar (r,w) r = sqrt(x^2 + y^2) 
-    w = arctan(y/x) = [-\pi,\pi] = [-180,180] 
+    w = arctan(y/x) = [-pi,pi] = [-180,180] 
 
     Author: Victor Gil
     """ 
